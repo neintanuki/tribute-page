@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap');
+
+body {
+    margin: 0;
+    font-family: "Source Sans Pro", sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+#main {
+    display: flex;
+    background: #1b263b;
+}
+
+#main > div {
+    height: 100vh;
+}
+
+#img-div {
+    flex-basis: 35%;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #0d1b2a;
+}
+
+#image {
+    display: block;
+    width: 100%;
+}
+
+#img-caption {
+    position: absolute;
+    bottom: 20%;
+    right: 0;
+    background-color: #0d1b2a;
+    color: white;
+    padding: 1rem;
+    font-weight: bold;
+}
+
+#info-div {
+    padding: 2.81rem;
+    flex-basis: 65%;
+    position: relative;
+    overflow-y: scroll;
+    color: white;
+}
+
+#hover-btn {
+    position: fixed;
+    bottom: 4rem;
+    right: 4rem;
+    cursor: pointer;
+    height: 4rem;
+    width: 4rem;
+    z-index: 99;
+    background: #0d1b2a;
+    border: none;
+    border-radius: 5rem;
+}
+
+#more-info {
+    background: #415a77;
+    height: 100%;
+    clip-path: circle(100px at 150% 100%);
+    overflow-y: scroll;
+    transition: clip-path .6s ease;
+    padding: 2.81rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+
+/* Hover States */
+
+#hover-btn:hover ~ #more-info,
+#more-info:hover {
+    clip-path: circle(200% at 0 0);
+}
+
+/* misc */
+#tribute-link {
+    display: inline-block;
+    text-decoration: none;
+    padding: .6rem 1rem;
+    margin: 1rem 0;
+    border-radius: 2rem;
+    background: #778da9;
+    color: white;
+}
